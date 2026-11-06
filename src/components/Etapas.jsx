@@ -31,7 +31,7 @@ const Etapas = () => {
           {/* etapa 3 */}
           <div className="bg-green-100 rounded-2xl p-8 text-center">
             <span className="text-5xl">♻️</span>
-            <h3 className="text-xl font-bold text-green-900 mt-5 mb-3">Faça a diferença</h3>
+            <h3 className="text-xl font-bold text-green-900 mt-5 mb-3">3. Faça a diferença</h3>
             <p className="text-gray-600">Os materiais são encaminhados para a destinação ambientalmente adequada.</p>
           </div>
 
