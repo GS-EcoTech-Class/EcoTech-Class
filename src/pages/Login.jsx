@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ilustracaoEco from '../assets/ilustracao-eco.png'
 
 const Login = () => {
+  const [email, setEmail] = useState('')
+  const [senha, setSenha] = useState('')
+
+  const handleLogin = (event) => {
+    event.preventDefault()
+  }
+
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
 
       {/* lado esquerdo */}
-      <div className="w-full md:w-1/2 bg-[#114217] text-white flex flex-col justify-center items-center px-10 py-14">
+      <div className="w-full md:w-1/2 bg-[#114217] text-white flex flex-col justify-center items-center px-10 py-8">
         <div className="max-w-md">
 
           {/* logo */}
-          <Link to="/" className="flex items-center gap-3 mb-16">
+          <Link to="/" className="flex items-center gap-3 mb-8">
             <span className="text-5xl">♻️</span>
             <h1 className="text-3xl font-bold">EcoTech <span className="text-[#f0832c]">Class</span></h1>
           </Link>
@@ -21,8 +28,8 @@ const Login = () => {
           <p className="text-gray-200 text-lg leading-relaxed mb-10">Conecte-se, doe, acumule pontos e faça a diferença pelo meio ambiente.</p>
 
           {/* ilustração */}
-          <div className="text-center py-8">
-            <img src={ilustracaoEco} alt="Planeta Terra apoiado por uma mão" className="w-full max-w-md mx-auto"/>
+          <div className="text-center py-3">
+            <img src={ilustracaoEco} alt="Planeta Terra apoiado por uma mão" className="w-full max-w-xs mx-auto"/>
             <p className="text-[#dce5d8] mt-5 text-sm">Pequenas atitudes transformam o futuro.</p>
           </div>
         </div>
@@ -35,23 +42,30 @@ const Login = () => {
           <p className="text-gray-600 mb-10">Acesse sua conta para continuar.</p>
 
           {/* campos */}
-          <form className="flex flex-col gap-6">
+          <form onSubmit={handleLogin} className="flex flex-col gap-6">
             <div>
               <label className="block text-[#152b11] font-semibold mb-2">E-mail</label>
-              <input type="email" placeholder="Digite seu e-mail" className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"/>
+              <input type="email" placeholder="Digite seu e-mail" value={email} onChange={(event) => setEmail(event.target.value)} required className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"/>
             </div>
 
             <div>
               <label className="block text-[#152b11] font-semibold mb-2">Senha</label>
-              <input type="password" placeholder="Digite sua senha" className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"/>
+              <input type="password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} required className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"/>
             </div>
-            <button type="button" className="w-full bg-[#f0832c] text-white font-bold py-3 rounded-full hover:bg-[#d96b1e] transition shadow-sm">Entrar</button>
+
+            <button type="submit" className="w-full bg-[#f0832c] text-white font-bold py-3 rounded-full hover:bg-[#d96b1e] transition shadow-sm">
+              Entrar
+            </button>
+
           </form>
 
           {/* cadastro */}
-          <p className="text-center text-gray-600 mt-8"> Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-[#4d6c48] font-bold hover:text-[#f0832c] transition">Cadastre-se</Link>
+          <p className="text-center text-gray-600 mt-8">Ainda não tem uma conta?{' '}
+            <Link to="/cadastro" className="text-[#4d6c48] font-bold hover:text-[#f0832c] transition">
+              Cadastre-se
+            </Link>
           </p>
+
         </div>
       </div>
 
