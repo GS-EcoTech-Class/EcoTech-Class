@@ -1,4 +1,5 @@
 import React from 'react'
+import CardVantagem from './CardVantagem'
 
 const Vantagens = () => {
   return (
@@ -15,26 +16,9 @@ const Vantagens = () => {
         {/* cards de vantagens */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {/* vantagem 1 */}
-          <div className="bg-white border-t-4 border-[#f0832c] rounded-2xl p-8 text-center shadow-sm">
-            <span className="text-5xl">🌎</span>
-            <h3 className="text-xl font-bold text-[#152b11] mt-5 mb-3">Impacto ambiental</h3>
-            <p className="text-gray-600">Incentive o descarte correto de eletrônicos e ajude a reduzir os impactos ambientais.</p>
-          </div>
-
-          {/* vantagem 2 */}
-          <div className="bg-white border-t-4 border-[#f0832c] rounded-2xl p-8 text-center shadow-sm">
-            <span className="text-5xl">🏆</span>
-            <h3 className="text-xl font-bold text-[#152b11] mt-5 mb-3">Gamificação</h3>
-            <p className="text-gray-600">Ganhe pontos pelas suas contribuições e acompanhe sua posição no ranking.</p>
-          </div>
-
-          {/* vantagem 3 */}
-          <div className="bg-white border-t-4 border-[#f0832c] rounded-2xl p-8 text-center shadow-sm">
-            <span className="text-5xl">🎓</span>
-            <h3 className="text-xl font-bold text-[#152b11] mt-5 mb-3">Educação sustentável</h3>
-            <p className="text-gray-600">Aprenda sobre sustentabilidade por meio de atitudes práticas dentro da instituição.</p>
-          </div>
+          <CardVantagem icone="🌎" titulo="Impacto ambiental" descricao="Incentive o descarte correto de eletrônicos e ajude a reduzir os impactos ambientais."/>
+          <CardVantagem icone="🏆" titulo="Gamificação" descricao="Ganhe pontos pelas suas contribuições e acompanhe sua posição no ranking."/>
+          <CardVantagem icone="🎓" titulo="Educação sustentável" descricao="Aprenda sobre sustentabilidade por meio de atitudes práticas dentro da instituição."/>
 
         </div>
 
