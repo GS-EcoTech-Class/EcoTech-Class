@@ -2,13 +2,13 @@ import React from 'react'
 
 const Header = ({ tema, alternarTema }) => {
   return (
-    <header className="w-full bg-white border-b-2 border-[#f0832c] shadow-sm">
+    <header className="w-full bg-white dark:bg-[#152b11] border-b-2 border-[#f0832c] shadow-sm transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* logo */}
         <div className="flex items-center gap-2">
           <span className="text-3xl">♻️</span>
-          <h1 className="text-2xl font-bold text-[#152b11]">EcoTech <span className="text-[#152b11]">Class</span></h1>
+          <h1 className="text-2xl font-bold text-[#152b11] dark:text-white">EcoTech <span className="text-[#152b11] dark:text-white">Class</span></h1>
         </div>
 
         {/* menu de navegação */}
