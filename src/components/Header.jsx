@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ tema, alternarTema }) => {
   return (
     <header className="w-full bg-white border-b-2 border-[#f0832c] shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -20,6 +20,7 @@ const Header = () => {
 
         {/* botões */}
         <div className="flex items-center gap-4">
+          <button onClick={alternarTema} title={tema === 'claro' ? 'Ativar tema escuro' : 'Ativar tema claro'} className="w-9 h-9 flex items-center justify-center rounded-full bg-[#dce5d8] hover:bg-[#cbd8c5] text-[#152b11] text-lg transition duration-200">{tema === 'claro' ? '◐' : '☼'}</button>
           <a href="/login" className="text-[#4d6c48] font-semibold hover:text-[#f0832c] transition">Entrar</a>
           <a href="/cadastro" className="bg-[#f0832c] text-white px-5 py-2.5 rounded-full font-semibold hover:bg-[#d96b1e] transition shadow-sm">Começar agora</a>
         </div>

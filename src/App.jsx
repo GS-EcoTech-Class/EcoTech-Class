@@ -9,11 +9,12 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Dashboard from './pages/Dashboard'
 import Admin from './pages/Admin'
+import useTema from './hooks/useTema'
 
-const Home = () => {
+const Home = ({ tema, alternarTema }) => {
   return (
     <div>
-      <Header />
+      <Header tema={tema} alternarTema={alternarTema} />
       <Hero />
       <Etapas />
       <Vantagens />
@@ -23,6 +24,7 @@ const Home = () => {
 }
 
 const App = () => {
+  const { tema, alternarTema } = useTema()
   return (
     <BrowserRouter>
       <Routes>
