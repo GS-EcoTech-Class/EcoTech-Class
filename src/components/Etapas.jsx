@@ -1,44 +1,25 @@
-
 import React from 'react'
+import CardEtapa from './CardEtapa'
 
 const Etapas = () => {
   return (
     <section id="etapas" className="w-full bg-white py-20">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* título da seção */}
+
         <div className="text-center mb-14">
           <span className="text-[#4d6c48] font-semibold">Simples e sustentável</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#152b11] mt-3 mb-4">Como funciona?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Transformar resíduos eletrônicos em atitudes sustentáveis pode ser mais simples do que você imagina.</p>
         </div>
 
-        {/* etapas */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* etapa 1 */}
-          <div className="bg-[#dce5d8] border-t-4 border-[#f0832c] rounded-2xl p-8 text-center">
-            <span className="text-5xl">📱</span>
-            <h3 className="text-xl font-bold text-[#152b11] mt-5 mb-3">1. Entregue</h3>
-            <p className="text-gray-600">Leve seus resíduos eletrônicos até um ponto de coleta participante.</p>
-          </div>
-
-          {/* etapa 2 */}
-          <div className="bg-[#dce5d8] border-t-4 border-[#f0832c] rounded-2xl p-8 text-center">
-            <span className="text-5xl">⭐</span>
-            <h3 className="text-xl font-bold text-[#152b11] mt-5 mb-3">2. Acumule pontos</h3>
-            <p className="text-gray-600">Sua contribuição é registrada e convertida em pontos na plataforma.</p>
-          </div>
-
-          {/* etapa 3 */}
-          <div className="bg-[#dce5d8] border-t-4 border-[#f0832c] rounded-2xl p-8 text-center">
-            <span className="text-5xl">♻️</span>
-            <h3 className="text-xl font-bold text-[#152b11] mt-5 mb-3">3. Faça a diferença</h3>
-            <p className="text-gray-600">Os materiais são encaminhados para a destinação ambientalmente adequada.</p>
-          </div>
-
+          <CardEtapa icone="📱" titulo="1. Entregue" descricao="Leve seus resíduos eletrônicos até um ponto de coleta participante."/>
+          <CardEtapa icone="⭐" titulo="2. Acumule pontos" descricao="Sua contribuição é registrada e convertida em pontos na plataforma."/>
+          <CardEtapa icone="♻️" titulo="3. Faça a diferença" descricao="Os materiais são encaminhados para a destinação ambientalmente adequada."/>
         </div>
-
+        
       </div>
     </section>
   )
