@@ -22,12 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Python
-__pycache__/
-*.pyc
-
-# Banco de dados local
-backend/ecotech.db
-
-backend/.venv/
