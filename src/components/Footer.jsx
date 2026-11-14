@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="w-full bg-[#152b11] border-t-4 border-[#f0832c] text-white">
-      <div className="max-w-6x1 mx-auto px-6 py-14">
+      <div className="max-w-6xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
           {/* logo e descrição */}
@@ -12,7 +12,6 @@ const Footer = () => {
               <span className="text-3xl">♻️</span>
               <h2 className="text-2xl font-bold">EcoTech <span className="text-[#f0832c]">Class</span></h2>
             </div>
-
             <p className="text-gray-300 leading-relaxed max-w-sm">Transformando o descarte eletrônico em atitudes sustentáveis por meio da educação e da tecnologia.</p>
           </div>
           {/* links */}
