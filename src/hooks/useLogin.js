@@ -6,7 +6,6 @@ const useLogin = () => {
 
   const handleLogin = (event) => {
     event.preventDefault()
-    window.location.href = '/dashboard'
   }
 
   return {
