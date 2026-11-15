@@ -1,5 +1,6 @@
 import React from 'react'
 import CardEtapa from './CardEtapa'
+import etapas from '../data/etapas'
 
 const Etapas = () => {
   return (
@@ -15,9 +16,9 @@ const Etapas = () => {
 
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <CardEtapa icone="📱" titulo="1. Entregue" descricao="Leve seus resíduos eletrônicos até um ponto de coleta participante."/>
-          <CardEtapa icone="⭐" titulo="2. Acumule pontos" descricao="Sua contribuição é registrada e convertida em pontos na plataforma."/>
-          <CardEtapa icone="♻️" titulo="3. Faça a diferença" descricao="Os materiais são encaminhados para a destinação ambientalmente adequada."/>
+          {etapas.map((etapa) => (
+            <CardEtapa key={etapa.titulo} icone={etapa.icone} titulo={etapa.titulo} descricao={etapa.descricao}/>
+          ))}
         </div>
 
       </div>

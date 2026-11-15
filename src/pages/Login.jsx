@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import ilustracaoEco from '../assets/ilustracao-eco.png'
+import useLogin from '../hooks/useLogin'
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [senha, setSenha] = useState('')
-
-  const handleLogin = (event) => {
-    event.preventDefault()
-  }
+  const {
+    email, setEmail,
+    senha, setSenha,
+    handleLogin
+  } = useLogin()
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
@@ -45,18 +45,29 @@ const Login = () => {
           <form onSubmit={handleLogin} className="flex flex-col gap-6">
             <div>
               <label className="block text-[#152b11] font-semibold mb-2">E-mail</label>
-              <input type="email" placeholder="Digite seu e-mail" value={email} onChange={(event) => setEmail(event.target.value)} required className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"/>
+              <input
+                type="email"
+                placeholder="Digite seu e-mail"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                required
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"
+              />
             </div>
 
             <div>
               <label className="block text-[#152b11] font-semibold mb-2">Senha</label>
-              <input type="password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} required className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"/>
+              <input
+                type="password"
+                placeholder="Digite sua senha"
+                value={senha}
+                onChange={(event) => setSenha(event.target.value)}
+                required
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-[#4d6c48] transition"
+              />
             </div>
 
-            <button type="submit" className="w-full bg-[#f0832c] text-white font-bold py-3 rounded-full hover:bg-[#d96b1e] transition shadow-sm">
-              Entrar
-            </button>
-
+            <button type="submit" className="w-full bg-[#f0832c] text-white font-bold py-3 rounded-full hover:bg-[#d96b1e] transition shadow-sm">Entrar</button>
           </form>
 
           {/* cadastro */}
