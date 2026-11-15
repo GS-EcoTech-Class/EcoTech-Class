@@ -13,15 +13,15 @@ const Header = ({ tema, alternarTema }) => {
 
         {/* menu de navegação */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#inicio" className="text-[#152b11] font-medium hover:text-[#f0832c] transition">Início</a>
-          <a href="#etapas" className="text-[#152b11] font-medium hover:text-[#f0832c] transition">Como funciona</a>
-          <a href="#vantagens" className="text-[#152b11] font-medium hover:text-[#f0832c] transition">Vantagens</a>
+          <a href="#inicio" className="text-[#152b11] dark:text-white font-medium hover:text-[#f0832c] transition">Início</a>
+          <a href="#etapas" className="text-[#152b11] dark:text-white font-medium hover:text-[#f0832c] transition">Como funciona</a>
+          <a href="#vantagens" className="text-[#152b11] dark:text-white font-medium hover:text-[#f0832c] transition">Vantagens</a>
         </nav>
 
         {/* botões */}
         <div className="flex items-center gap-4">
           <button onClick={alternarTema} title={tema === 'claro' ? 'Ativar tema escuro' : 'Ativar tema claro'} className="w-9 h-9 flex items-center justify-center rounded-full bg-[#dce5d8] hover:bg-[#cbd8c5] text-[#152b11] text-lg transition duration-200">{tema === 'claro' ? '◐' : '☼'}</button>
-          <a href="/login" className="text-[#4d6c48] font-semibold hover:text-[#f0832c] transition">Entrar</a>
+          <a href="/login" className="text-[#4d6c48] dark:text-white font-semibold hover:text-[#f0832c] transition">Entrar</a>
           <a href="/cadastro" className="bg-[#f0832c] text-white px-5 py-2.5 rounded-full font-semibold hover:bg-[#d96b1e] transition shadow-sm">Começar agora</a>
         </div>
       </div>
