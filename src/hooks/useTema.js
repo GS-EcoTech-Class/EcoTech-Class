@@ -1,12 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
+import useLocalStorage from './useLocalStorage'
 
 const useTema = () => {
-  const [tema, setTema] = useState(() => {
-    return localStorage.getItem('tema') || 'claro'
-  })
+  const [tema, setTema] = useLocalStorage('tema', 'claro')
 
   useEffect(() => {
-    localStorage.setItem('tema', tema)
     document.documentElement.setAttribute('data-tema', tema)
   }, [tema])
 
