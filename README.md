@@ -1,16 +1,93 @@
-# React + Vite
+# 🌱 EcoTech Class
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **EcoTech Class** é uma plataforma que incentiva o descarte correto de resíduos eletrônicos por meio da educação ambiental e da gamificação.
 
-Currently, two official plugins are available:
+A proposta é transformar escolas e instituições de ensino em pontos de coleta de lixo eletrônico, incentivando estudantes e a comunidade a participarem de ações sustentáveis.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Objetivo do projeto
 
-## React Compiler
+Promover a conscientização ambiental e estimular o descarte adequado de resíduos eletrônicos, tornando a sustentabilidade uma atividade participativa e colaborativa dentro das instituições de ensino.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💡 Funcionalidades
 
-## Expanding the ESLint configuration
+- **Página inicial:** apresentação do projeto e de sua proposta.
+- **Cadastro e login:** telas de acesso para os usuários.
+- **Painel do estudante:** acompanhamento de pontos, contribuições e ranking.
+- **Painel administrativo:** visualização de informações sobre estudantes, coletas e desempenho das turmas.
+- **Tema claro e escuro:** opção de personalização da aparência da plataforma, com preferência salva no navegador.
+- **Gamificação:** incentivo à participação por meio de pontos e rankings.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologias utilizadas
+
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
+- React Router DOM
+- HTML5
+- CSS3
+
+## 📁 Estrutura do projeto
+
+O projeto está organizado em páginas, componentes, hooks e arquivos de dados, buscando manter o código organizado e facilitar sua manutenção.
+
+- `components/`: componentes reutilizáveis da interface.
+- `pages/`: páginas da plataforma.
+- `hooks/`: lógica reutilizável por meio de Hooks e Custom Hooks.
+- `data/`: informações utilizadas na apresentação dos conteúdos.
+- `assets/`: imagens e outros recursos visuais.
+
+## 👩‍💻 Integrantes
+
+| Nome | RM |
+|---|---:|
+| Eduarda Soares Moraes | 569369 |
+| Isabella Yogui Kohara | 569777 |
+| Julia Souza Matarazzo | 571340 |
+| Marcella Pinheiro Silva | 569457 |
+| Mariana Malagutti Gomes Peixoto | 570290 |
+
+## 🔗 Repositório GitHub
+
+[EcoTech Class — GitHub](https://github.com/GS-EcoTech-Class/EcoTech-Class)
+
+## ▶️ Como executar o projeto
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/GS-EcoTech-Class/EcoTech-Class.git
+   ```
+
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd EcoTech-Class
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse o endereço disponibilizado no terminal, geralmente `http://localhost:5173`.
+
+## 🌎 Sustentabilidade
+
+O EcoTech Class está alinhado aos Objetivos de Desenvolvimento Sustentável (ODS), especialmente:
+
+- **ODS 4 – Educação de Qualidade**
+- **ODS 9 – Indústria, Inovação e Infraestrutura**
+- **ODS 11 – Cidades e Comunidades Sustentáveis**
+- **ODS 13 – Ação Contra a Mudança Global do Clima**
+
+---
+
+**EcoTech Class — Pequenas atitudes, grandes transformações.**
