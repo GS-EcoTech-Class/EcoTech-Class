@@ -6,10 +6,17 @@ import Cadastro from './pages/Cadastro'
 import Dashboard from './pages/Dashboard'
 import Admin from './pages/Admin'
 import useTema from './hooks/useTema'
+import { useEffect } from 'react'
+import { api } from './services/api'
 
 const App = () => {
   const { tema, alternarTema } = useTema()
-
+    useEffect(() => {
+      api.listarUsuarios()
+        .then(dados => console.log('✅ API Conectada! Usuários:', dados))
+        .catch(erro => console.error('❌ Erro na API:', erro))
+    }, [])
+    
   return (
     <BrowserRouter>
       <Routes>
