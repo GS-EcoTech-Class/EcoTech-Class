@@ -8,9 +8,10 @@ const Cadastro = () => {
     nome, setNome,
     email, setEmail,
     tipoUsuario, setTipoUsuario,
+    turma, setTurma,
     senha, setSenha,
     confirmarSenha, setConfirmarSenha,
-    mensagem, handleCadastro
+    mensagem, carregando, handleCadastro
   } = useCadastro()
 
   return (
@@ -82,6 +83,24 @@ const Cadastro = () => {
                 <option value="instituicao">Instituição de ensino</option>
               </select>
             </div>
+
+            {tipoUsuario === 'estudante' && (
+              <div>
+                <label className="block text-[#152b11] font-semibold mb-1 text-sm">Turma</label>
+                <select
+                  value={turma}
+                  onChange={(event) => setTurma(event.target.value)}
+                  required
+                  className="w-full border border-gray-300 rounded-xl px-4 py-2.5 outline-none focus:border-[#4d6c48] transition bg-white"
+                >
+                  <option value="" disabled>Selecione sua turma</option>
+                  <option value="1º ESPG">1º ESPG</option>
+                  <option value="2º ESPG">2º ESPG</option>
+                  <option value="3º ESPG">3º ESPG</option>
+                  <option value="4º ESPG">4º ESPG</option>
+                </select>
+              </div>
+            )}
 
             <div>
               <label className="block text-[#152b11] font-semibold mb-1 text-sm">Senha</label>

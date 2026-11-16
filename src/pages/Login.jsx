@@ -7,6 +7,7 @@ const Login = () => {
   const {
     email, setEmail,
     senha, setSenha,
+    erro, carregando,
     handleLogin
   } = useLogin()
 
@@ -67,7 +68,19 @@ const Login = () => {
               />
             </div>
 
-            <button type="submit" className="w-full bg-[#f0832c] text-white font-bold py-3 rounded-full hover:bg-[#d96b1e] transition shadow-sm">Entrar</button>
+            <button
+              type="submit"
+              disabled={carregando}
+              className="w-full bg-[#f0832c] text-white font-bold py-3 rounded-full hover:bg-[#d96b1e] transition shadow-sm disabled:opacity-60"
+            >
+              {carregando ? 'Entrando...' : 'Entrar'}
+            </button>
+
+            {erro && (
+              <p className="text-center text-sm font-semibold text-red-600">
+                {erro}
+              </p>
+            )}
           </form>
 
           {/* cadastro */}
